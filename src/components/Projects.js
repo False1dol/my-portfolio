@@ -89,7 +89,7 @@ class Projects extends React.Component{
                         {
                             JSON.parse(process.env.REACT_APP_USER_FUTURE_PROJECTS).map((item, index) => {
                                 return(
-                                    <Col xs={6} md={6} lg={6} xl={4} className="project-cards">
+                                    <Col xs={8} md={6} lg={6} xl={4} className="project-cards">
                                         <Card style={{ width: '22rem' }}>
                                             <Card.Header>
                                                 <Icon iconName={item.image} size={50} />
