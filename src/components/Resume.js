@@ -60,11 +60,11 @@ class Resume extends React.Component{
                                 if(index < JSON.parse(process.env.REACT_APP_USER_GENERAL_SKILLS).length/2)
                                 return(
                                     <div className="progress-list-skill" key={index}>
-                                        <p key={index}>
-                                            <span className="progress-list-skill-title" key={index}>{item.skill}</span>
-                                            <span className="progress-list-skill-value" key={index+1}>{item.value}%</span>
+                                        <p>
+                                            <span className="progress-list-skill-title">{item.skill}</span>
+                                            <span className="progress-list-skill-value">{item.value}%</span>
                                         </p>
-                                        <ProgressBar key={index} now={item.value}/>
+                                        <ProgressBar now={item.value}/>
                                     </div>
                                 )
                                 else{
@@ -79,11 +79,11 @@ class Resume extends React.Component{
                                 if(index >= JSON.parse(process.env.REACT_APP_USER_GENERAL_SKILLS).length/2)
                                     return(
                                         <div className="progress-list-skill" key={index}>
-                                            <p key={index}>
-                                                <span className="progress-list-skill-title" key={index}>{item.skill}</span>
-                                                <span className="progress-list-skill-value" key={index+1}>{item.value}%</span>
+                                            <p>
+                                                <span className="progress-list-skill-title">{item.skill}</span>
+                                                <span className="progress-list-skill-value">{item.value}%</span>
                                             </p>
-                                            <ProgressBar key={index} now={item.value}/>
+                                            <ProgressBar now={item.value}/>
                                         </div>
                                     )
                                 else{

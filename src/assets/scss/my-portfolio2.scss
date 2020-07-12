@@ -349,6 +349,7 @@ dd{
 .site-button:hover {
   background-color: #7ee4d5;
   text-decoration: none;
+  color:#fff;
 }
 
 .resume-list{
@@ -503,6 +504,11 @@ ul{
 
 .nav li a:hover:after {
   opacity: 1;
+}
+
+.project-cards a:hover, a:visited, a:link, a:active
+{
+  text-decoration: none;
 }
 
 .project-cards .card{

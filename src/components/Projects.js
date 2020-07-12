@@ -47,18 +47,20 @@ class Projects extends React.Component{
                         {
                             JSON.parse(process.env.REACT_APP_USER_PERSONAL_PROJECTS).map((item, index) => {
                                 return(
-                                    <Col xs={8} md={6} lg={6} xl={4} className="project-cards">
-                                        <Card style={{ width: '22rem' }}>
-                                            <Card.Header>
-                                                <Icon iconName={item.image} size={50} />
-                                            </Card.Header>
-                                            <Card.Body>
-                                                <Card.Title>{item.title}</Card.Title>
-                                                <Card.Text>
-                                                    {item.about}
-                                                </Card.Text>
-                                            </Card.Body>
-                                        </Card>
+                                    <Col xs={8} md={6} lg={6} xl={4} className="project-cards" key={index}>
+                                        <a href={item.githubLink} target="_blank" rel="noopener noreferrer">
+                                            <Card style={{ width: '22rem' }}>
+                                                <Card.Header>
+                                                    <Icon iconName={item.image} size={50} />
+                                                </Card.Header>
+                                                <Card.Body>
+                                                    <Card.Title>{item.title}</Card.Title>
+                                                    <Card.Text>
+                                                        {item.about}
+                                                    </Card.Text>
+                                                </Card.Body>
+                                            </Card>
+                                        </a>
                                     </Col>
                                 )
                             })
@@ -68,18 +70,20 @@ class Projects extends React.Component{
                         {
                             JSON.parse(process.env.REACT_APP_USER_COURSE_PROJECTS).map((item, index) => {
                                 return(
-                                    <Col xs={8} md={6} lg={6} xl={4} className="project-cards">
-                                        <Card style={{ width: '22rem' }}>
-                                            <Card.Header>
-                                                <Icon iconName={item.image} size={50} />
-                                            </Card.Header>
-                                            <Card.Body>
-                                                <Card.Title>{item.title}</Card.Title>
-                                                <Card.Text>
-                                                    {item.about}
-                                                </Card.Text>
-                                            </Card.Body>
-                                        </Card>
+                                    <Col xs={8} md={6} lg={6} xl={4} className="project-cards" key={index}>
+                                        <a href={item.githubLink} target="_blank" rel="noopener noreferrer">
+                                            <Card style={{ width: '22rem' }}>
+                                                <Card.Header>
+                                                    <Icon iconName={item.image} size={50} />
+                                                </Card.Header>
+                                                <Card.Body>
+                                                    <Card.Title>{item.title}</Card.Title>
+                                                    <Card.Text>
+                                                        {item.about}
+                                                    </Card.Text>
+                                                </Card.Body>
+                                            </Card>
+                                        </a>
                                     </Col>
                                 )
                             })
@@ -89,22 +93,23 @@ class Projects extends React.Component{
                         {
                             JSON.parse(process.env.REACT_APP_USER_FUTURE_PROJECTS).map((item, index) => {
                                 return(
-                                    <Col xs={8} md={6} lg={6} xl={4} className="project-cards">
-                                        <Card style={{ width: '22rem' }}>
-                                            <Card.Header>
-                                                <Icon iconName={item.image} size={50} />
-                                            </Card.Header>
-                                            <Card.Body>
-                                                <Card.Title>{item.title}</Card.Title>
-                                                <Card.Text>
-                                                    {item.about}
-                                                </Card.Text>
-                                            </Card.Body>
-                                        </Card>
+                                    <Col xs={8} md={6} lg={6} xl={4} className="project-cards" key={index}>
+                                        <a href={item.githubLink} target="_blank" rel="noopener noreferrer">
+                                            <Card style={{ width: '22rem' }}>
+                                                <Card.Header>
+                                                    <Icon iconName={item.image} size={50} />
+                                                </Card.Header>
+                                                <Card.Body>
+                                                    <Card.Title>{item.title}</Card.Title>
+                                                    <Card.Text>
+                                                        {item.about}
+                                                    </Card.Text>
+                                                </Card.Body>
+                                            </Card>
+                                        </a>
                                     </Col>
                                 )
                             })
-
                         }
 
                     </Row>

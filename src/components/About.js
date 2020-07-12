@@ -1,13 +1,12 @@
 import React from "react";
-import { Button, Container, Row,
+import { Container, Row,
         Col } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
+import myResume from "assets/resume/RounakSenguptaResume.pdf"
 
 class About extends React.Component{
 
     render(){
-        console.log(this.props.inputRef);
-
         //
         return(
                 <Container id="section" className="section" ref={this.props.inputRef}>
@@ -21,7 +20,7 @@ class About extends React.Component{
                                     }
                                 </span>
                             </p>
-                            <Button className="site-button" variant="primary"><AiOutlineDownload color="white"/> Download CV</Button>
+                            <a className="site-button" href={myResume} target="_blank" rel="noopener noreferrer" download="Rounak_Sengupta_Resume.pdf"><AiOutlineDownload size={20} color="white"/> Download CV</a>
                         </Col>
                     </Row>
                 </Container>

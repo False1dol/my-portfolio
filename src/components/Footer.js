@@ -25,7 +25,7 @@ class Footer extends React.Component{
                         </Col>
                         <Col>
                             <div className="copyright">
-                                © {new Date().getFullYear()} made by Rounak Sengupta.
+                                © Designed & Built by Rounak Sengupta.
                             </div>
                         </Col>
                     </Row>

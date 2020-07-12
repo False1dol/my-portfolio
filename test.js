@@ -7,8 +7,8 @@ var jsonObject = {
     "address": "Tempe, Arizona - 85281",
     "github": "https://www.github.com/falseid0l",
     "linkedin": "https://www.linkedin.com/in/falseid0l",
-    "about": "I'm interested in solving the myriad problems plaguing our world, starting with the small ones. One of the best ways I know how to do that is: by writing code. And that's who I am, a Software Engineer.",
-    "resume-intro": "Initially, I desired to be a Hardware Engineer and hence my degree in Electronics. But soon after, after considerable rethoughts, I decided to make a switch to Software. Following this pursuit, I'm undergoing a Master's degree in Computer Engineering.",
+    "about": "I'm keen on solving the myriad problems plaguing our world, starting with the small ones. One of the best ways I know how to do that is: by writing code. And that's who I am, a Software Engineer.",
+    "resumeIntro": "Initially, I desired to be a Hardware Engineer and hence my degree in Electronics. Soon, after considerable re-thoughts, I decided to make a switch to Software. Following this pursuit, I'm undergoing a Master's degree in Computer Engineering.",
     "education": [
         {
             "university": "Arizona State University, Tempe",
@@ -74,74 +74,104 @@ var jsonObject = {
             "title": "Ultimate Calendar",
             "image": "AiOutlineCalendar",
             "githubLink": "https://github.com/FalseId0l/ultimate-calendar",
-            "about": "",
+            "about": "An Event-Calendar library, built with React to help me in my Kronosphere project.",
             "aboutLonger": ""
         },
         {
             "title": "Kronosphere",
             "image": "AiOutlineSchedule",
             "githubLink": "https://github.com/FalseId0l/Kronosphere",
-            "about": "",
+            "about": "Creates a blister in spacetime, trapping all units caught in its sphere of influence and causes you to move very quickly inside it.",
             "aboutLonger": ""
         }],
     "courseProjects": [
         {
-            "title": "Security Concerns in Cryptocurrencies and their Countermeasures",
-            "image": "AiOutlineSecurityScan",
-            "githubLink": "https://github.com/FalseId0l/Security-Concerns-in-Cryptocurrencies",
-            "about": "",
-            "aboutLonger": ""
-        },
-        {
             "title": "Large Scale Recommendation System",
             "image": "AiOutlineBulb",
             "githubLink": "https://github.com/FalseId0l/Large-Scale-Recommendation-System",
-            "about": "",
+            "about": "Built a Recommendation System using an Attention model coupled with a DNN-CTR model to significantly boost recommendation accuracy.",
             "aboutLonger": ""
         },
         {
             "title": "Music Genre Recognition",
             "image": "AiOutlineAudio",
             "githubLink": "https://github.com/FalseId0l/Music-Genre-Recognition",
-            "about": "Performed signal processing on the GTZAN music dataset to generate a usable dataset for machine learning. The Python library, Librosa was used for this. Used different models such as Support Vector Machines, Convolution Neural Networks, Logistic Regression to generate the classifiers. The highest accuracy achieved was 96%, using the Multinomial Logistic Regression model.",
+            "about": "Used different models such as SVMs, CNNs, Logistic Regression to generate the classifiers. Accuracies of up to 96% were achieved.",
             "aboutLonger": ""
         },
         {
             "title": "Food Delivery System using TurtleBot",
             "image": "AiOutlineCar",
             "githubLink": "https://github.com/FalseId0l/TurtleBot-Delivery-System",
-            "about": "Solved the problem of a food delivery system where an agent is trying to reach all the destinations within all time constraints with minimal distance covered by leveraging the A* (A-star) algorithm. Added an additional time constraint to the state model of the TurtleBot in Gazebo on the ROS operating system.",
+            "about": "Solved the problem to reach all the destinations within all time and distance constraints by leveraging the A* algorithm in Gazebo (ROS).",
+            "aboutLonger": ""
+        },
+        {
+            "title": "Security Concerns in Cryptocurrencies and their Countermeasures",
+            "image": "AiOutlineSecurityScan",
+            "githubLink": "https://github.com/FalseId0l/Security-Concerns-in-Cryptocurrencies",
+            "about": "Reviewed and discussed the variety of areas in which blockchain has been applied and its security concerns.",
             "aboutLonger": ""
         },
         {
             "title": "Enrollment Prediction",
             "image": "AiOutlineFundView",
             "githubLink": "https://github.com/FalseId0l/Enrollment-Prediction-Database",
-            "about": "Built a Python script to generate randomized data for 100 students as a JSON object and CSV file to store in NoSQL and SQL databases, respectively. Used data from MongoDB (the NoSQL database) to train a machine learning bot for predicting the enrollment number for a school for a particular year.",
+            "about": "Used randomly generated data from MongoDB (the NoSQL database) to train a machine learning bot for predicting the enrollment number for a school for a particular year.",
             "aboutLonger": ""
         }],
     "futureProjects":[
         {
             "title": "Chess bot",
             "image": "AiOutlineRobot",
-            "githubLink": "not there yet",
-            "about": "",
+            "githubLink": "#",
+            "about": "Work in Progress",
             "aboutLonger": ""
         },
         {
             "title": "Predicting stocks using DL and other models",
             "image": "AiOutlineStock",
-            "githubLink": "not there yet",
-            "about": "",
+            "githubLink": "#",
+            "about": "Work in Progress",
             "aboutLonger": ""
         },
         {
             "title": "Not finalized yet",
             "image": "AiOutlineGold",
-            "githubLink": "not finalized",
-            "about": "",
+            "githubLink": "#",
+            "about": "Work in Progress",
             "aboutLonger": ""
         }]
 }
 
-console.log(JSON.stringify(jsonObject.futureProjects));
+
+const fs = require('fs');
+
+var data = "";
+data = data + "REACT_APP_USER_NAME = " + JSON.stringify(jsonObject.name) + "\n";
+data = data + "REACT_APP_USER_ROLE = " + JSON.stringify(jsonObject.role) + "\n";
+data = data + "REACT_APP_USER_AGE = " + JSON.stringify(jsonObject.age) + "\n";
+data = data + "REACT_APP_USER_PHONE = " + JSON.stringify(jsonObject.phone) + "\n";
+data = data + "REACT_APP_USER_EMAIL = " + JSON.stringify(jsonObject.email) + "\n";
+data = data + "REACT_APP_USER_ADDRESS = " + JSON.stringify(jsonObject.address) + "\n";
+data = data + "REACT_APP_USER_GITHUB = " + JSON.stringify(jsonObject.github) + "\n";
+data = data + "REACT_APP_USER_LINKEDIN = " + JSON.stringify(jsonObject.linkedin) + "\n";
+data = data + "REACT_APP_USER_ABOUT = " + JSON.stringify(jsonObject.about) + "\n";
+data = data + "REACT_APP_USER_RESUME_INTRO = " + JSON.stringify(jsonObject.resumeIntro) + "\n";
+data = data + "REACT_APP_USER_EDUCATION = " + JSON.stringify(jsonObject.education) + "\n";
+data = data + "REACT_APP_USER_EMPLOYMENT = " + JSON.stringify(jsonObject.employment) + "\n";
+data = data + "REACT_APP_USER_GENERAL_SKILLS = " + JSON.stringify(jsonObject.generalSkills) + "\n";
+data = data + "REACT_APP_USER_PERSONAL_PROJECTS = " + JSON.stringify(jsonObject.personalProjects) + "\n";
+data = data + "REACT_APP_USER_COURSE_PROJECTS = " + JSON.stringify(jsonObject.courseProjects) + "\n";
+data = data + "REACT_APP_USER_FUTURE_PROJECTS = " + JSON.stringify(jsonObject.futureProjects) + "\n";
+
+
+fs.writeFile(".env", data, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log("The file was saved!");
+});
+
+
+console.log(data);
